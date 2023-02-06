@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from 'components/App';
 import './index.css';
-import profileData from './user.json'
+// import userData from './user.json'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App profile={profileData} />
+    <App />
   </React.StrictMode>
 );

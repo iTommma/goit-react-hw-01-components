@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 export const Profile = ({user}) => {
-    console.log(user);
+    // console.log(user);
     const {username, tag, location, avatar, stats} = user;
   
     return (

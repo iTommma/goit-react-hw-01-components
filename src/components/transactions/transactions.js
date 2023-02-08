@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 export const Transactions = ({ items }) => {
-//   console.log(items);
+  //   console.log(items);
   return (
     <table className="transaction-history">
       <thead>
@@ -13,29 +13,28 @@ export const Transactions = ({ items }) => {
       </thead>
 
       <tbody>
-        {items.map( item => {
-            const {id, type, amount, currency} = item;
-            return (
-                <tr key={id}>
-                    <td>{type}</td>
-                    <td>{amount}</td>
-                    <td>{currency}</td>
-                </tr>
-            )
+        {items.map(item => {
+          const { id, type, amount, currency } = item;
+          return (
+            <tr key={id}>
+              <td>{type}</td>
+              <td>{amount}</td>
+              <td>{currency}</td>
+            </tr>
+          );
         })}
       </tbody>
-
     </table>
   );
 };
 
 Transactions.propTypes = {
-    items: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            type: PropTypes.string.isRequired,
-            amount: PropTypes.string.isRequired,
-            currency: PropTypes.string.isRequired,
-        })
-    )
-}
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
+};

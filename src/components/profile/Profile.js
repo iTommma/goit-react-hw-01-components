@@ -1,33 +1,38 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import style from "components/profile/Profile.module.css";
+console.log(style);
+console.log(style.sectio);
 
 export const Profile = ({ user }) => {
   // console.log(user);
   const { username, tag, location, avatar, stats } = user;
 
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
+    <section className={style.sectio}>
+      <div className={style.profil}>
+        <div className={style.descriptio}>
+        <img src={avatar} alt="User avatar" className={style.avatar} />
+        <p className={style.name}>{username}</p>
+        <p className={style.tag}>@{tag}</p>
+        <p className={style.location}>{location}</p>
       </div>
 
-      <ul className="stats">
+      <ul className={stats}>
         <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
+          <span className={style.label}>Followers</span>
+          <span className={style.quantity}>{stats.followers}</span>
         </li>
         <li>
-          <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
+          <span className={style.label}>Views</span>
+          <span className={style.quantity}>{stats.views}</span>
         </li>
         <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
+          <span className={style.label}>Likes</span>
+          <span className={style.quantity}>{stats.likes}</span>
         </li>
       </ul>
     </div>
+    </section>
   );
 };
 

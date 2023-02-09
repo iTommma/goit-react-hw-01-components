@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import style from "components/profile/Profile.module.css";
+import style from "components/profile/Profile.module.scss";
 // console.log(style);
 
 export const Profile = ({ user }) => {

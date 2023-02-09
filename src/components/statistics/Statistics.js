@@ -3,14 +3,15 @@ import style from 'components/statistics/Statistics.module.css';
 
 const randomColor = () =>
   '#' + Math.floor(Math.random() * 16777215).toString(16);
-console.log(randomColor);
+// console.log(randomColor);
 
 export const Statistics = ({ title, stats }) => {
   // console.log(title);
   // console.log(stats);
+  
   return (
     <section className={style.statistics}>
-      <h2 className={style.title}>{title}</h2>
+      {title && (<h2 className={style.title}>{title}</h2>)}
       <ul className={style.statList}>
         {stats.map(({ id, label, percentage }) => {
           return (
@@ -30,6 +31,6 @@ export const Statistics = ({ title, stats }) => {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.array.isRequired,
 };
